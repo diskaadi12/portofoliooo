@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Diska Adi Pratama</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css"> <!-- Tambahan CSS khusus gallery -->
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <div class="mark">D</div>
+      <div>
+        <div class="name">Diska Adi Pratama</div>
+        <div class="role">Network Engineer</div>
+      </div>
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN GALLERY ===== -->
+  <main class="gallery-section">
+    <h1>Galeri Kegiatan Saya</h1>
+    <hr class="full-divider">
+    <p class="subtitle">Beberapa dokumentasi aktivitas dan proyek yang telah saya lakukan</p>
+
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="img/ii.jpg" alt="Kegiatan 1">
+        <p>Batik part1</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/aww.jpg" alt="Kegiatan 2">
+        <p>Ukt Kits part1</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/bln.jpg" alt="Kegiatan 3">
+        <p>Fun Game Kits</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/bn.jpg" alt="Kegiatan 4">
+        <p>Ktp eps 1</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/hehe.jpg" alt="Kegiatan 5">
+        <p>Yuhuuu</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/hh.jpg" alt="Kegiatan 6">
+        <p>Krenotek 25</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/huhu.jpg" alt="Kegiatan 7">
+        <p>Ketum & Waketum 1</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/hura.jpg" alt="Kegiatan 8">
+        <p>Batik part2</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/ibuk.jpg" alt="Kegiatan 9">
+        <p>Ukt Kits part2</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/ya.jpg" alt="Kegiatan 10">
+        <p>Workshop Unisba part2</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== ZOOM OVERLAY ===== -->
+  <div class="zoom-overlay" id="zoomOverlay">
+    <img id="zoomImage" src="" alt="Zoomed Image">
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 Diska Adi Pratama. All rights reserved.
+  </footer>
+
+  <!-- ===== SCRIPT ===== -->
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    const zoomOverlay = document.getElementById('zoomOverlay');
+    const zoomImage = document.getElementById('zoomImage');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        zoomImage.src = img.src;
+        zoomOverlay.style.display = 'flex';
+      });
+    });
+
+    zoomOverlay.addEventListener('click', () => {
+      zoomOverlay.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
